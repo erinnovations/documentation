@@ -1,0 +1,24 @@
+/** Component: Carousel */
+
+@import '../../scss/_mixins.scss';
+
+.carousel {
+  --swiper-theme-color: var(--strapi-primary-500);
+
+  --swiper-navigation-color: var(--strapi-neutral-600);
+  --swiper-navigation-size: 16px;
+  --swiper-navigation-sides-offset: var(--swiper-navigation-size);
+
+  --swiper-pagination-bullet-size: 4px;
+  --swiper-pagination-bullet-horizontal-gap: calc(var(--swiper-pagination-bullet-size) / 2);
+  --swiper-pagination-bullet-inactive-color: #BCBAFF;
+
+  max-width: 100%;
+}
+
+/** Responsive */
+@include medium-up {
+  .carousel {
+    --swiper-navigation-sides-offset: calc(var(--swiper-navigation-size) * 2);
+  }
+}
