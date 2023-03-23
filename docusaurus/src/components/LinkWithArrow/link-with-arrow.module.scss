@@ -4,6 +4,10 @@
 
 :root {
   --strapi-lwa-icon-ml: var(--strapi-spacing-2);
+  --strapi-lwa-font-size: 14px;
+  --strapi-lwa-font-weight: 500;
+  --strapi-lwa-line-height: 20px;
+  --strapi-lwa-hover-icon-ml: var(--strapi-spacing-3);
 }
 
 .lwa {
@@ -12,19 +16,20 @@
   --ifm-link-hover-color: #2825B8;
   --ifm-link-hover-decoration: none;
 
-  --strapi-lwa-font-size: 14px;
-  --strapi-lwa-font-weight: 500;
-  --strapi-lwa-line-height: 20px;
-
   font-size: var(--strapi-lwa-font-size);
   font-weight: var(--strapi-lwa-font-weight);
   line-height: var(--strapi-lwa-line-height);
   transition: all 0.2s ease;
 
+  &:focus, &:hover {
+    --strapi-lwa-icon-ml: var(--strapi-lwa-hover-icon-ml);
+  }
+
   &__icon {
     display: inline-block;
     line-height: 0;
     margin-left: var(--strapi-lwa-icon-ml);
+    transition: margin-left 0.1s ease;
   }
 
   &--apart {

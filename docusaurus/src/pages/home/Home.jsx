@@ -27,25 +27,31 @@ export default function PageHome() {
       <style
         dangerouslySetInnerHTML={{
           __html: `
+            .navbar {
+              filter: drop-shadow(0px 2px 15px rgba(33, 33, 52, 0.1));
+            }
+
             html[data-theme='dark'] {
               --ifm-background-color: #181826;
               --ifm-navbar-background-color: #181826;
 
               --strapi-primary-600: #4945FF;
             }
-          `
+          `,
         }}
       />
       <main className={clsx('font-poppins', styles.home)}>
         <Hero id="homeHero">
-          <HeroTitle
-            dangerouslySetInnerHTML={{
-              __html: pageTitle.replace('Strapi', '<br />Strapi'),
-            }}
-          />
-          <HeroDescription>
-            {pageDescription}
-          </HeroDescription>
+          <Container>
+            <HeroTitle
+              dangerouslySetInnerHTML={{
+                __html: pageTitle.replace('Strapi', '<br />Strapi'),
+              }}
+            />
+            <HeroDescription>
+              {pageDescription}
+            </HeroDescription>
+          </Container>
         </Hero>
         <section
           id="homeCarousel"
@@ -68,7 +74,7 @@ export default function PageHome() {
                   children: (
                     <div className={styles.home__carousel__cta}>
                       <Button
-                        to="/dev-docs/intro"
+                        to="/dev-docs/quick-start"
                         size="huge"
                         decorative="🚀"
                       >
@@ -152,7 +158,7 @@ export default function PageHome() {
                 {
                   card: {
                     to: '/user-docs/intro',
-                    title: 'User Guides',
+                    title: 'User Guide',
                     description: 'Get the most out of the admin panel with our user guide',
                     imgSrc: require('@site/static/img/assets/home/preview--user-guides.jpg').default,
                   },
@@ -161,7 +167,7 @@ export default function PageHome() {
                   links: [
                     {
                       children: 'Getting started in the admin panel',
-                      to: '/user-docs/intro',
+                      to: '/user-docs/intro#accessing-the-admin-panel',
                     },
                     {
                       children: 'Creating content-types',
@@ -177,7 +183,7 @@ export default function PageHome() {
                     },
                     {
                       children: 'Setting up the admin panel',
-                      to: '/user-docs/intro#accessing-the-admin-panel',
+                      to: '/user-docs/settings/managing-global-settings',
                     },
                   ],
                 },

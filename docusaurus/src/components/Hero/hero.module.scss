@@ -3,8 +3,8 @@
 @import '../../scss/_mixins.scss';
 
 :root {
-  --strapi-hero-py: var(--strapi-spacing-8);
-  --strapi-hero-px: var(--ifm-spacing-horizontal);
+  --strapi-hero-py: var(--strapi-spacing-6);
+  --strapi-hero-gap: var(--strapi-spacing-2);
 
   --strapi-hero-title-color: #1D1B84;
   --strapi-hero-title-font-size: var(--strapi-font-size-xl);
@@ -16,16 +16,13 @@
 }
 
 .hero {
-  padding: var(--strapi-hero-py) var(--strapi-hero-px);
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  padding-top: var(--strapi-hero-py);
+  padding-bottom: var(--strapi-hero-py);
   text-align: center;
-  gap: var(--strapi-spacing-4);
 
   &__title,
   &__description {
-    margin: 0;
+    margin: var(--strapi-hero-gap) 0;
   }
 
   &__title {
