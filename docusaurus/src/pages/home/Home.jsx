@@ -13,9 +13,10 @@ import {
   HeroDescription,
   HeroTitle,
   LinkWithArrow,
+  SearchBar,
 } from '../../components';
 
-const pageTitle = 'Welcome to Strapi’s documentation';
+const pageTitle = 'Strapi’s documentation';
 const pageDescription = 'Get set up in minutes to build any projects in hours instead of weeks.';
 
 export default function PageHome() {
@@ -28,7 +29,7 @@ export default function PageHome() {
         dangerouslySetInnerHTML={{
           __html: `
             .navbar {
-              filter: drop-shadow(0px 2px 15px rgba(33, 33, 52, 0.1));
+              display: none;
             }
 
             html[data-theme='dark'] {
@@ -47,14 +48,13 @@ export default function PageHome() {
       <main className={clsx('font-poppins', styles.home)}>
         <Hero id="homeHero">
           <Container>
-            <HeroTitle
-              dangerouslySetInnerHTML={{
-                __html: pageTitle.replace('Strapi', '<br />Strapi'),
-              }}
-            />
+            <HeroTitle>
+              {pageTitle}
+            </HeroTitle>
             <HeroDescription>
               {pageDescription}
             </HeroDescription>
+            <SearchBar />
           </Container>
         </Hero>
         <section

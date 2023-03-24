@@ -4,7 +4,7 @@
 
 :root {
   --strapi-hero-py: var(--strapi-spacing-6);
-  --strapi-hero-gap: var(--strapi-spacing-2);
+  --strapi-hero-gap: var(--strapi-spacing-4);
 
   --strapi-hero-title-color: #1D1B84;
   --strapi-hero-title-font-size: var(--strapi-font-size-xl);
@@ -20,30 +20,27 @@
   padding-bottom: var(--strapi-hero-py);
   text-align: center;
 
-  &__title,
-  &__description {
-    margin: var(--strapi-hero-gap) 0;
-  }
-
   &__title {
     color: var(--strapi-hero-title-color);
     font-weight: 700;
     font-size: var(--strapi-hero-title-font-size);
     line-height: var(--strapi-hero-title-line-height);
     letter-spacing: 0.4px;
+    margin: 0 0 var(--strapi-hero-gap);
   }
 
   &__description {
     color: var(--strapi-hero-description-color);
     font-size: var(--strapi-hero-description-font-size);
     line-height: var(--strapi-hero-description-line-height);
+    margin: 0 0 var(--strapi-hero-gap);
   }
 }
 
 /** Responsive */
 @include medium-up {
   :root {
-    --strapi-hero-py: 70px;
+    --strapi-hero-py: 40px;
 
     --strapi-hero-title-font-size: 43px;
     --strapi-hero-title-line-height: 56px;
