@@ -37,6 +37,10 @@ export default function PageHome() {
 
               --strapi-primary-600: #4945FF;
             }
+
+            html[data-theme='dark'] .navbar .DocSearch-Button {
+              background: var(--strapi-neutral-0);
+            }
           `,
         }}
       />
