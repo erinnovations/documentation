@@ -84,6 +84,7 @@ export function Carousel({
         />
       </div>
       <button
+        aria-label="Previous slide"
         onClick={scrollPrev}
         className={clsx(
           styles.carousel__arrow,
@@ -93,6 +94,7 @@ export function Carousel({
         <IconChevronLeft />
       </button>
       <button
+        aria-label="Next slide"
         onClick={scrollNext}
         className={clsx(
           styles.carousel__arrow,
@@ -105,6 +107,8 @@ export function Carousel({
         {scrollSnaps.map((_, paginationItemIndex) => (
           <button
             key={paginationItemIndex}
+            aria-hidden
+            tabIndex={-1}
             onClick={() => scrollTo(paginationItemIndex)}
             className={clsx(
               styles.carousel__pagination__btn,
