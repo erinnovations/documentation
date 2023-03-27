@@ -31,6 +31,10 @@ Strapi provides a `createCoreRouter` factory function that automatically generat
 - passing in configuration options to each router
 - and disabling some core routers to [create custom ones](#creating-custom-routers).
 
+:::caution
+createCoreRouter is not yet suported in Strapi v4.x Plugins. (Will most likely be fixed in v5.)
+:::
+
 A core router file is a JavaScript file exporting the result of a call to `createCoreRouter` with the following parameters:
 
 | Parameter | Description                                                                                  | Type     |
